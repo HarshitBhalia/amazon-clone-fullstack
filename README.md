@@ -2,6 +2,9 @@
 
 A full-stack e-commerce web application that replicates Amazon's design and user experience, built with React.js, Express.js, and PostgreSQL.
 
+## Live Demo
+- **Frontend (Vercel)**: [https://amazon-clone-fullstack.vercel.app](https://amazon-clone-fullstack.vercel.app)
+- **Backend API (Render)**: [https://amazon-clone-backend-1ovu.onrender.com](https://amazon-clone-backend-1ovu.onrender.com)
 ## Tech Stack
 
 | Layer | Technology |
