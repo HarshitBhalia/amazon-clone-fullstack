@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://amazon-clone-fullstack.vercel.app'],
   credentials: true
 }));
 app.use(express.json());
@@ -22,7 +22,11 @@ app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/orders', orderRoutes);
 
-// Health check
+// Health check & Server root message
+app.get('/', (req, res) => {
+  res.json({ status: 'OK', message: 'Amazon Clone Backend API is up and running! Access endpoints at /api/...' });
+});
+
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Amazon Clone API is running' });
 });
